@@ -21,6 +21,8 @@ ADD_PREP_TIME=(время на оставшуюся подготовку до н
 
 
  1.offset_delta.cfg 
+
+Принцип работы - раз в ХХ сек производит замер расстояния до стола,  высчитывает прогнозируемое изменение офсета за время подготовки к печати + времени первого слоя, если время меньше заданного порога - запускает следующий макрос в цепи стартоых. 
  
 Аргументы:
 ```
@@ -33,6 +35,26 @@ NEXT_MACRO = (имя макроса запускаемого по заверше
 ```
 
 ОБЯЗАТЕЛЬНО должен запускаться в режиме простоя/пайузы, например можно разделить стартовый макрос на 2, и в конце первого перед вызовод данного макроса дать базовый PAUSE, т.к. макрос работает через delayed.
+
+Пример работы 
+```
+TEMP_OFFSET_DELTA CHECK_PERIOD=60 START_OFFSET_THRESHOLD=0.03 GANTRY_TARGET=0 BED_TARGET=110 IN_START_MACRO=0 FIRST_LAYER_TIME=240
+> Temp offset monitoring start (carto), threshold = 0.03mm.
+> First layer time 240.0s. => delta multiplier=4.
+> OffsetΔ -0.033/60s TotalΔ -0.033/60s Bed 107.14° Cham 38.58° Gant 50.68°
+> Estimated offset deviation on first layer = 0.132/0.03mm.
+> OffsetΔ -0.016/60s TotalΔ -0.048/120s Bed 107.92° Cham 38.48° Gant 51.94°
+> Estimated offset deviation on first layer = 0.064/0.03mm.
+> OffsetΔ -0.011/60s TotalΔ -0.06/180s Bed 108.59° Cham 38.57° Gant 53.1°
+> Estimated offset deviation on first layer = 0.044/0.03mm.
+> OffsetΔ -0.011/60s TotalΔ -0.07/240s Bed 109.19° Cham 38.69° Gant 54.2°
+> Estimated offset deviation on first layer = 0.044/0.03mm.
+> OffsetΔ -0.008/60s TotalΔ -0.079/300s Bed 109.48° Cham 38.79° Gant 55.18°
+> Estimated offset deviation on first layer = 0.032/0.03mm.
+> OffsetΔ -0.007/60s TotalΔ -0.086/360s Bed 109.82° Cham 38.91° Gant 56.05°
+> Estimated offset deviation on first layer = 0.028/0.03mm.
+> START_PRINT
+```
 
 Особенности - написано под себя, под IDEX принтер, максросы _TEMP_OFFSET_DELTA_CARTO_REFRESH и _TEMP_OFFSET_DELTA_CARTO_START могут требовать корректировки под ваши "окружающие" макросы
 
