@@ -38,7 +38,7 @@ NEXT_MACRO = (имя макроса запускаемого по заверше
 
 Пример работы 
 ```
-TEMP_OFFSET_DELTA CHECK_PERIOD=60 START_OFFSET_THRESHOLD=0.03 GANTRY_TARGET=0 BED_TARGET=110 IN_START_MACRO=0 FIRST_LAYER_TIME=240
+TEMP_OFFSET_DELTA CHECK_PERIOD=60 START_OFFSET_THRESHOLD=0.03 GANTRY_TARGET=0 BED_TARGET=110 FIRST_LAYER_TIME=240 NEXT_MACRO = START_PRINT
 > Temp offset monitoring start (carto), threshold = 0.03mm.
 > First layer time 240.0s. => delta multiplier=4.
 > OffsetΔ -0.033/60s TotalΔ -0.033/60s Bed 107.14° Cham 38.58° Gant 50.68°
