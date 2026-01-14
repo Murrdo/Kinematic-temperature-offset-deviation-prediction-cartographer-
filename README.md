@@ -1,7 +1,8 @@
 # Kinematic-temperature-offset-deviation-prediction-cartographer-
 BETA!
 
-Набор макросов обеспечивающих адаптивный прогрев кинематики "больших" принтеров для обеспечения качественного первого слоя, не ожидая по 20-40 минут перед началом печати моделки 20*20мм.
+Набор макросов обеспечивающих адаптивный прогрев кинематики "больших" принтеров для обеспечения качественного первого слоя.
+
 
 Состоит из двух макросов:
 
@@ -39,17 +40,17 @@ NEXT_MACRO = (имя макроса запускаемого по заверше
 TEMP_OFFSET_DELTA CHECK_PERIOD=60 START_OFFSET_THRESHOLD=0.03 FIRST_LAYER_TIME=240 NEXT_MACRO = START_PRINT
 > Temp offset monitoring start (carto), threshold = 0.03mm.
 > First layer time 240.0s. => delta multiplier=4.
-> OffsetΔ -0.033/60s TotalΔ -0.033/60s Bed 107.14° Cham 38.58° Gant 50.68°
+> OffsetΔ -0.033/60s TotalΔ -0.033/60s Bed 107.14° 
 > Estimated offset deviation on first layer = 0.132/0.03mm.
-> OffsetΔ -0.016/60s TotalΔ -0.048/120s Bed 107.92° Cham 38.48° Gant 51.94°
+> OffsetΔ -0.016/60s TotalΔ -0.048/120s Bed 107.92° 
 > Estimated offset deviation on first layer = 0.064/0.03mm.
-> OffsetΔ -0.011/60s TotalΔ -0.06/180s Bed 108.59° Cham 38.57° Gant 53.1°
+> OffsetΔ -0.011/60s TotalΔ -0.06/180s Bed 108.59° 
 > Estimated offset deviation on first layer = 0.044/0.03mm.
-> OffsetΔ -0.011/60s TotalΔ -0.07/240s Bed 109.19° Cham 38.69° Gant 54.2°
+> OffsetΔ -0.011/60s TotalΔ -0.07/240s Bed 109.19° 
 > Estimated offset deviation on first layer = 0.044/0.03mm.
-> OffsetΔ -0.008/60s TotalΔ -0.079/300s Bed 109.48° Cham 38.79° Gant 55.18°
+> OffsetΔ -0.008/60s TotalΔ -0.079/300s Bed 109.48° 
 > Estimated offset deviation on first layer = 0.032/0.03mm.
-> OffsetΔ -0.007/60s TotalΔ -0.086/360s Bed 109.82° Cham 38.91° Gant 56.05°
+> OffsetΔ -0.007/60s TotalΔ -0.086/360s Bed 109.82° 
 > Estimated offset deviation on first layer = 0.028/0.03mm.
 > START_PRINT
 ```
